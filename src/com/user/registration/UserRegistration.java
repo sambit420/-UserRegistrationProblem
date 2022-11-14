@@ -1,4 +1,6 @@
-//UC - 1 is to As a User need to enter a valid First Name.
+//UC - 1 is to As a User need to enter a valid First Name. (First name starts with Cap and has minimum 3 characters)
+//UC - 2 is to As a User need to enter a valid Last Name. (Last name starts with Cap and has minimum 3 characters)
+
 package com.user.registration;
 
 import java.util.Scanner;
@@ -11,13 +13,15 @@ public class UserRegistration {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the User's First Name");
         String firstName = scan.next();
-        if (validName(firstName))
+        System.out.println("Enter the User's Last Name");
+        String lastName = scan.next();
+        if (validName(firstName) && validName(lastName))
         {
-            System.out.println("Given first name : " + firstName + " is valid");
+            System.out.println("Given first name : " + firstName + " & last name : " + lastName + " is valid");
         }
         else
         {
-            System.out.println("Given first name : " + firstName + " is not valid");
+            System.out.println("Given first name : " + firstName + " & last name : " + lastName + " is not valid");
         }
     }
 
